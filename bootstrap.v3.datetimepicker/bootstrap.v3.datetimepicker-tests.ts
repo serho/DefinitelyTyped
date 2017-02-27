@@ -1,5 +1,3 @@
-/// <reference types="jquery"/>
-
 import * as moment from 'moment';
 
 function test_cases() {

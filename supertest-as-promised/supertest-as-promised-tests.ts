@@ -1,6 +1,3 @@
-
-/// <reference types="jasmine" />
-
 import * as request from 'supertest-as-promised';
 import * as express from 'express';
 
@@ -29,12 +26,8 @@ request(app)
     // ...
   });
 
-describe("GET /kittens", () => {
-  it("should work", () => {
-    return request(app).get("/kittens").expect(200);
-  });
-});
 
+request(app).get("/kittens").expect(200);
 
 // Agents
 var agent = request.agent(app);
