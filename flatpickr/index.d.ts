@@ -57,8 +57,11 @@ declare namespace Flatpickr {
         utc?: boolean;
         weekNumbers?: boolean;
         wrap?: boolean;
+        locale?: Locale;
     }
 
+    type LocaleObject = { shorthand: string[], longhand: string[] };
+    type Locale = string | { firstDayOfWeek: number, months: LocaleObject, weekdays: LocaleObject };
     type DateString = Date | string;
     type DateRange = DateString | { from: DateString, to: DateString } | ((date: Date) => boolean);
     type Mode = 'single' | 'multiple' | 'range';
